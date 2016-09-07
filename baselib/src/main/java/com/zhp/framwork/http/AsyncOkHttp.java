@@ -143,10 +143,10 @@ public class AsyncOkHttp {
                 .url(urlWithQueryString)
                 .get();
         setHeader(builder, requestParams);
-        if (!NetworkUtils.isConnected()) {
-            builder.cacheControl(CacheControl.FORCE_CACHE);
-            NHLog.d("force offline cacheResponse for request: %s", builder.toString());
-        }
+//        if (!NetworkUtils.isConnected()) {
+//            builder.cacheControl(CacheControl.FORCE_CACHE);
+//            NHLog.d("force offline cacheResponse for request: %s", builder.toString());
+//        }
         return doExecute(builder, responseCallback);
     }
 
