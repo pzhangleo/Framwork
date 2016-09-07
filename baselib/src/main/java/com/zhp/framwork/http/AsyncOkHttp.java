@@ -94,9 +94,9 @@ public class AsyncOkHttp {
         dispatcher.setMaxRequests(DEFAULT_MAX_CONNECTIONS);
         dispatcher.setMaxRequestsPerHost(DEFAULT_MAX_CONNECTIONS);
         mOkHttpClient = new OkHttpClient.Builder()
-                .readTimeout(DEFAULT_CONNECT_TIMEOUT, TimeUnit.MILLISECONDS)
-                .writeTimeout(DEFAULT_CONNECT_TIMEOUT, TimeUnit.MILLISECONDS)
-                .connectTimeout(DEFAULT_SOCKET_TIMEOUT, TimeUnit.MILLISECONDS)
+                .readTimeout(DEFAULT_SOCKET_TIMEOUT, TimeUnit.MILLISECONDS)
+                .writeTimeout(DEFAULT_SOCKET_TIMEOUT, TimeUnit.MILLISECONDS)
+                .connectTimeout(DEFAULT_CONNECT_TIMEOUT, TimeUnit.MILLISECONDS)
                 .dispatcher(dispatcher)
                 .dns(Dns.SYSTEM)
                 .build();
