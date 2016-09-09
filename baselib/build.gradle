@@ -17,10 +17,10 @@ android {
         }
     }
     lintOptions {
-        showAll true
-        explainIssues true
         disable 'InvalidPackage'
         abortOnError true
+        textReport true
+        textOutput "stdout"
     }
 }
 
