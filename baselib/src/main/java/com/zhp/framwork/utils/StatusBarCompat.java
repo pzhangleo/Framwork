@@ -1,5 +1,6 @@
 package com.zhp.framwork.utils;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
@@ -37,6 +38,7 @@ public class StatusBarCompat {
         setStatusBarColor(activity, calculateStatusBarColor(statusColor, alpha));
     }
 
+    @TargetApi(19)
     public static void setStatusBarColor(Activity activity, int statusColor) {
         Window window = activity.getWindow();
         ViewGroup mContentView = (ViewGroup) activity.findViewById(Window.ID_ANDROID_CONTENT);

@@ -18,6 +18,7 @@ import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by zhangpeng on 16/1/29.
@@ -642,7 +643,7 @@ public class FileUtils {
             String filename = getUrlFileName(url);
             int i = filename.lastIndexOf('.');
             if (i > 0 && i < filename.length() - 1) {
-                return filename.substring(i + 1).toLowerCase();
+                return filename.substring(i + 1).toLowerCase(Locale.US);
             }
         }
         return "";
@@ -663,11 +664,11 @@ public class FileUtils {
         if (size < KB) {
             fileSize = size + "B";
         } else if (size < MB) {
-            fileSize = String.format("%.1f", size / KB) + "KB";
+            fileSize = String.format(Locale.US, "%.1f", size / KB) + "KB";
         } else if (size < GB) {
-            fileSize = String.format("%.1f", size / MB) + "MB";
+            fileSize = String.format(Locale.US, "%.1f", size / MB) + "MB";
         } else {
-            fileSize = String.format("%.1f", size / GB) + "GB";
+            fileSize = String.format(Locale.US, "%.1f", size / GB) + "GB";
         }
 
         return fileSize;
@@ -731,11 +732,11 @@ public class FileUtils {
         if (size < KB) {
             fileSize = size + "B";
         } else if (size < MB) {
-            fileSize = String.format("%.1f", size / KB) + "KB";
+            fileSize = String.format(Locale.US, "%.1f", size / KB) + "KB";
         } else if (size < GB) {
-            fileSize = String.format("%.1f", size / MB) + "MB";
+            fileSize = String.format(Locale.US, "%.1f", size / MB) + "MB";
         } else {
-            fileSize = String.format("%.1f", size / GB) + "GB";
+            fileSize = String.format(Locale.US, "%.1f", size / GB) + "GB";
         }
 
         return fileSize;
@@ -746,11 +747,11 @@ public class FileUtils {
         if (size < KB) {
             fileSize = size + "B";
         } else if (size < MB) {
-            fileSize = String.format("%.1f", size / KB) + "KB";
+            fileSize = String.format(Locale.US, "%.1f", size / KB) + "KB";
         } else if (size < GB) {
-            fileSize = String.format("%.1f", size / MB) + "MB";
+            fileSize = String.format(Locale.US, "%.1f", size / MB) + "MB";
         } else {
-            fileSize = String.format("%.1f", size / GB) + "GB";
+            fileSize = String.format(Locale.US, "%.1f", size / GB) + "GB";
         }
 
         return fileSize;

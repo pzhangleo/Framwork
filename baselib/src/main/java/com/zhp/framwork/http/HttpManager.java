@@ -193,6 +193,7 @@ public class HttpManager {
      * @param bksFile      客户端证书
      * @param password     客户端证书密码
      */
+    @SuppressWarnings("TrulyRandom")
     public void setCertificates(InputStream[] certificates, InputStream bksFile, String password) {
         try {
             TrustManager[] trustManagers = prepareTrustManager(certificates);

@@ -280,7 +280,7 @@ public final class DateTimeUtils {
         String dateStart = "01/14/2012 09:20:58";
         String dateStop = "01/14/2012 09:26:00";
 
-        SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", Locale.US);
 
         Date d1 = null;
         Date d2 = null;
