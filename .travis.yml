@@ -4,7 +4,9 @@ android:
   components:
     # Uncomment the lines below if you want to
     # use the latest revision of Android SDK Tools
-    - platform-tools-24.0.2
+    - platform-tools
+    - platform-tools
+    - tools
     - tools
 
     # The BuildTools version used by your project
