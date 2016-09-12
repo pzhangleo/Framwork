@@ -448,13 +448,12 @@ public class ImageUtils {
             o2.inSampleSize = scale;
             b = BitmapFactory.decodeStream(in, null, o2);
         } catch (IOException E) {
-
+            E.printStackTrace();
         } finally {
             if (in != null) {
                 try {
                     in.close();
                 } catch (IOException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
             }
